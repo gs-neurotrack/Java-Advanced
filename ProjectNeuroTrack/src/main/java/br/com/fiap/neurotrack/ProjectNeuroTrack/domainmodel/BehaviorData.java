@@ -8,7 +8,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "BEHAVIOR_DATA")
+@Table(name = "GS_BEHAVIOR_DATA")
 public class BehaviorData {
 
     @Id

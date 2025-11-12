@@ -10,7 +10,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "DAILY_LOGS")
+@Table(name = "GS_DAILY_LOGS")
 public class DailyLogs {
 
     @Id

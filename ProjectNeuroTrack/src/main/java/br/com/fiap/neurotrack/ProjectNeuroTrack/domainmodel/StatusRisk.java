@@ -8,7 +8,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "STATUS_RISK")
+@Table(name = "GS_STATUS_RISK")
 public class StatusRisk {
 
     @Id

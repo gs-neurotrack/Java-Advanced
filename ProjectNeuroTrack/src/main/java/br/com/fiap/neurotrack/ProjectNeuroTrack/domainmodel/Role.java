@@ -8,7 +8,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "ROLE")
+@Table(name = "GS_ROLE")
 public class Role {
 
     @Id

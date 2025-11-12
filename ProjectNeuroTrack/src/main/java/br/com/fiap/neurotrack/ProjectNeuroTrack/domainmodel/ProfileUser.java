@@ -8,7 +8,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "PROFILE_USER")
+@Table(name = "GS_PROFILE_USER")
 public class ProfileUser {
 
     @Id

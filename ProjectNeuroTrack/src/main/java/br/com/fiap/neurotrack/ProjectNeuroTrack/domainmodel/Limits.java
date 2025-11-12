@@ -8,7 +8,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "LIMITS")
+@Table(name = "GS_LIMITS")
 public class Limits {
 
     @Id

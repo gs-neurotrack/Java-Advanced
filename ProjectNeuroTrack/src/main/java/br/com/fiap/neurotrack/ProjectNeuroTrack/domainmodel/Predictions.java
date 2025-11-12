@@ -9,7 +9,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "PREDICTIONS")
+@Table(name = "GS_PREDICTIONS")
 public class Predictions {
 
     @Id
