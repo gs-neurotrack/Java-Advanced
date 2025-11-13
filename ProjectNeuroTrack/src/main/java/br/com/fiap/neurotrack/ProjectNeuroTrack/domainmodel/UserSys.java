@@ -9,7 +9,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "GS_USER_SYS")
+@Table(name = "GS_USERS")
 public class UserSys {
 
     @Id
@@ -25,6 +25,9 @@ public class UserSys {
 
     @Column(name = "PASSWORD_USER", nullable = false, length = 100)
     private @Getter @Setter String password;
+
+    @Column(name = "STATUS", nullable = false, length = 1)
+    private @Getter @Setter String status;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ID_ROLE")

@@ -13,6 +13,6 @@ public interface UserSysService {
     boolean existsById(Long id);
     void deleteById(Long id);
     void delete(UserSys userSys);
-    UserSys update(UserSys userSys);
+    UserSys partialUpdate(Long id, UserSys userSys);
 
 }

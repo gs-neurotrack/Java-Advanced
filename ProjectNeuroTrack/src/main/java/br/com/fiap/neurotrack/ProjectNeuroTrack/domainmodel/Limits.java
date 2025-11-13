@@ -13,14 +13,14 @@ public class Limits {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_LIMIT")
+    @Column(name = "ID_LIMITS")
     private @Getter @Setter Long id;
 
-    @Column(name = "LIMIT_VALUE", nullable = false)
-    private @Getter @Setter Double limitValue;
+    @Column(name = "LIMIT_HOURS", nullable = false)
+    private @Getter @Setter Double limitHours;
 
-    @Column(name = "LIMIT_TYPE", nullable = false, length = 50)
-    private @Getter @Setter String limitType;
+    @Column(name = "LIMIT_MEETINGS", nullable = false, length = 50)
+    private @Getter @Setter String limitMeetings;
 
     @Override
     public boolean equals(Object o) {
@@ -34,6 +34,6 @@ public class Limits {
     public int hashCode() { return Objects.hash(id); }
 
     @Override
-    public String toString() { return "Limits{id=" + id + ", limitValue=" + limitValue + "}"; }
+    public String toString() { return "Limits{id=" + id + ", limitValue=" + limitHours + "}"; }
 }
 
