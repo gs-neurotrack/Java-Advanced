@@ -7,6 +7,8 @@ import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.repositories.LimitsR
 import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.repositories.RoleRepository;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.repositories.UserSysRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -22,10 +24,9 @@ public class UserSysServiceImpl implements UserSysService {
     private final LimitsRepository limitsRepository;  // Injeção do repository de Limits
 
     @Override
-    public List<UserSys> findAll() {
-        return new ArrayList<>(
-                this.userSysRepository.findAll()
-        );
+    public Page<UserSys> findAll(int pagina, int itens) {
+        return userSysRepository.findAll(PageRequest.of(pagina, itens));
+
     }
 
     @Override

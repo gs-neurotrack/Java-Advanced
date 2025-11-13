@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,9 +29,10 @@ public class UserSysApiController {
 
     @Operation(summary = "Listar Todos os Usuarios", method = "GET")
     @GetMapping
-    public ResponseEntity<List<UserSys>> findAll() {
-        List<UserSys> users = this.userSysService.findAll();
-        return ResponseEntity.ok(users);
+    public ResponseEntity<Page<UserSys>> findAll(@RequestParam int pagina,
+                                                 @RequestParam int itens) {
+        Page<UserSys> usersPage = userSysService.findAll(pagina, itens);
+        return ResponseEntity.ok(usersPage);
     }
 
     @Operation(summary = "Listar um usuário por ID", method = "GET")
