@@ -4,6 +4,7 @@ import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.UserSys;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.repositories.LimitsRepository;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.repositories.RoleRepository;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.repositories.UserSysRepository;
+import br.com.fiap.neurotrack.ProjectNeuroTrack.infrastructure.config.TokenConfig;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.DTO.request.LoginRequest;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.DTO.request.RegisterUserRequest;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.DTO.response.LoginResponse;
@@ -29,13 +30,15 @@ public class AuthController {
     private final LimitsRepository limitsRepository;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
+    private final TokenConfig tokenConfig;
 
-    public AuthController(UserSysRepository userSysRepository, RoleRepository roleRepository, LimitsRepository limitsRepository, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager) {
+    public AuthController(UserSysRepository userSysRepository, RoleRepository roleRepository, LimitsRepository limitsRepository, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager, TokenConfig tokenConfig) {
         this.userSysRepository = userSysRepository;
         this.roleRepository = roleRepository;
         this.limitsRepository = limitsRepository;
         this.passwordEncoder = passwordEncoder;
         this.authenticationManager = authenticationManager;
+        this.tokenConfig = tokenConfig;
     }
 
     @PostMapping("/login")
@@ -44,9 +47,12 @@ public class AuthController {
         UsernamePasswordAuthenticationToken userAndPass = new UsernamePasswordAuthenticationToken(request.email(), request.password());
         Authentication authentication = authenticationManager.authenticate(userAndPass);
 
-        return null;
+        UserSys user = (UserSys) authentication.getPrincipal();
+        String token = tokenConfig.generateToken(user);
+        return ResponseEntity.ok(new LoginResponse(token));
     }
 
+    @PostMapping("/register")
     public ResponseEntity<RegisterUserResponse> register(@Valid @RequestBody RegisterUserRequest request) {
 
         var role = roleRepository.findById(request.roleId())
@@ -59,6 +65,7 @@ public class AuthController {
         newUser.setName(request.name());
         newUser.setEmail(request.email());
         newUser.setPassword(passwordEncoder.encode(request.password()));
+        newUser.setStatus(request.status());
         newUser.setRole(role);
         newUser.setLimits(limits);
 
