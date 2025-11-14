@@ -11,6 +11,10 @@ import br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.DTO.response.Regist
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,15 +27,23 @@ public class AuthController {
     private final UserSysRepository userSysRepository;
     private final RoleRepository roleRepository;
     private final LimitsRepository limitsRepository;
+    private final PasswordEncoder passwordEncoder;
+    private final AuthenticationManager authenticationManager;
 
-    public AuthController(UserSysRepository userSysRepository, RoleRepository roleRepository, LimitsRepository limitsRepository) {
+    public AuthController(UserSysRepository userSysRepository, RoleRepository roleRepository, LimitsRepository limitsRepository, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager) {
         this.userSysRepository = userSysRepository;
         this.roleRepository = roleRepository;
         this.limitsRepository = limitsRepository;
+        this.passwordEncoder = passwordEncoder;
+        this.authenticationManager = authenticationManager;
     }
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest request) {
+
+        UsernamePasswordAuthenticationToken userAndPass = new UsernamePasswordAuthenticationToken(request.email(), request.password());
+        Authentication authentication = authenticationManager.authenticate(userAndPass);
+
         return null;
     }
 
@@ -46,7 +58,7 @@ public class AuthController {
         UserSys newUser = new UserSys();
         newUser.setName(request.name());
         newUser.setEmail(request.email());
-        newUser.setPassword(request.password());
+        newUser.setPassword(passwordEncoder.encode(request.password()));
         newUser.setRole(role);
         newUser.setLimits(limits);
 
