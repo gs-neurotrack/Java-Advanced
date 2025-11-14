@@ -2,7 +2,11 @@ package br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @NoArgsConstructor
@@ -10,7 +14,7 @@ import java.util.Objects;
 @Builder
 @Entity
 @Table(name = "GS_USERS")
-public class UserSys {
+public class UserSys implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -50,5 +54,35 @@ public class UserSys {
 
     @Override
     public String toString() { return "UserSys{id=" + id + ", name='" + name + "'}"; }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of();
+    }
+
+    @Override
+    public String getUsername() {
+        return "";
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
 }
 

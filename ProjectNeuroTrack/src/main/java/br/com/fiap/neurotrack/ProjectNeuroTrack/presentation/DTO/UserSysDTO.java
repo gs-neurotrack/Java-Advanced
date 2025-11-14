@@ -1,4 +1,4 @@
-package br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.transferObjects;
+package br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.DTO;
 
 import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.Limits;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.Role;

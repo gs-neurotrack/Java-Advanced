@@ -3,7 +3,7 @@ package br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.controller;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.UserSys;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.repositories.LimitsRepository;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.domainmodel.repositories.RoleRepository;
-import br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.transferObjects.UserSysDTO;
+import br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.DTO.UserSysDTO;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.service.UserSysService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -14,7 +14,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
