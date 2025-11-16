@@ -170,3 +170,31 @@ Caso queria uma outra opção de acesso as APIs, clique no link abaixo.
   "limitsId": 2
 }
 ```
+Para conseguir fazer as requisições é obrigatório que o usuário esteja REGISTRADO no sistema, e após isso, faça login com e-mail e senha cadastrados. É utilizado Spring Security no projeto, e é um requisito que o usuário exista para que possa acessar as requisições. Para isso, o usuário deve acessar o Swagger e no campo "Authentication" registrar um usuário. Após isso, será gerado um token no sistema para que ele faça login, e a partir desse token o sistema entende que o usuário realmente existe.
+
+Abaixo o exemplo da requisição:
+| Método | Endpoint                                   | Funcionalidade                                                   | URI                             |
+|--------|--------------------------------------------|------------------------------------------------------------------|---------------------------------|
+| POST   | `/auth/register`                           | Registra um novo usuário.                                        | [Link](http://localhost:8080/auth/register)   |
+
+```bash
+{
+  "name": "testando",
+  "email": "teste@gmail.com",
+  "password": "test21233",
+  "status": "A",
+  "roleId": 2,
+  "limitsId": 3
+}
+```
+
+| Método | Endpoint                                   | Funcionalidade                                                   | URI                             |
+|--------|--------------------------------------------|------------------------------------------------------------------|---------------------------------|
+| POST   | `/auth/register`                           | Registra um novo usuário.                                        | [Link](http://localhost:8080/auth/register)   |
+
+```bash
+{
+  "email": "pedro@gmail.com",
+  "password": "bombom123"
+}
+```
