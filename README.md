@@ -1,4 +1,4 @@
-![Logo](images/logo.png)
+![Logo](images/logoNeuroTrack.jpeg)
 
 # 🩺 NeuroTrack
 
@@ -12,16 +12,14 @@ O **NeuroTrack** é uma plataforma robusta de **Business Intelligence (BI)** que
 
 | Funcionalidade | Descrição |
 | :--- | :--- |
-| 🚨 **Alertas Inteligentes** | Notificações em tempo real sobre lotes próximos ao vencimento e estoques mínimos. |
-| 💸 **Otimização de Compras** | Sugestões de pedidos baseadas em padrões de consumo histórico e níveis de segurança. |
-| 🔍 **Rastreabilidade Total** | Controle completo sobre a entrada, localização e dispensa de cada lote de medicamento. |
-| 📊 **Relatórios Gerenciais** | Dashboards em Oracle Apex para tomada de decisão estratégica e *compliance*. |
+| 🚨 **Alertas Inteligentes**  | Notificações em tempo real sobre sua saúde mental. |
+| 📊 **Relatórios Gerenciais** | Dashboards para acompanhamento de sua saúde mental. |
 
 ---
 
 ## 🏗️ Arquitetura e Tecnologia
 
-A MedSave adota uma arquitetura moderna e escalável, utilizando o melhor de cada tecnologia:
+O NeuroTrack adota uma arquitetura moderna e escalável, utilizando o melhor de cada tecnologia:
 
 * **Frontend & BI:** **Oracle Apex**
 * **Backend & Microserviços:** **Java** e **C#**
