@@ -50,7 +50,7 @@ O NeuroTrack adota uma arquitetura moderna e escalável, utilizando o melhor de 
 ### 🗃️ Diagrama de Entidade-Relacionamento (DER)
 
 <div align="center">
-  <img src="images/der.jpg" alt="Diagrama DER" style="max-width: 90%; border: 1px solid #ddd; border-radius: 4px;">
+  <img src="images/der_gs.png" alt="Diagrama DER" style="max-width: 90%; border: 1px solid #ddd; border-radius: 4px;">
 </div>
 
 ---
