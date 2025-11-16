@@ -9,6 +9,8 @@ import br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.DTO.request.LoginRe
 import br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.DTO.request.RegisterUserRequest;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.DTO.response.LoginResponse;
 import br.com.fiap.neurotrack.ProjectNeuroTrack.presentation.DTO.response.RegisterUserResponse;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
+@Tag(name = "Authentication", description = "Authentication to User")
 public class AuthController {
 
     private final UserSysRepository userSysRepository;
@@ -41,6 +44,7 @@ public class AuthController {
         this.tokenConfig = tokenConfig;
     }
 
+    @Operation(summary = "Fazer login de um usuário", method = "POST")
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest request) {
 
@@ -52,6 +56,7 @@ public class AuthController {
         return ResponseEntity.ok(new LoginResponse(token));
     }
 
+    @Operation(summary = "Registrar um usuário", method = "POST")
     @PostMapping("/register")
     public ResponseEntity<RegisterUserResponse> register(@Valid @RequestBody RegisterUserRequest request) {
 
