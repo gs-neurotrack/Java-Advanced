@@ -198,3 +198,4 @@ Abaixo o exemplo da requisição:
   "password": "bombom123"
 }
 ```
+Ao realizar login, será retornado um TOKEN, e para testar a aplicação completa, basta clicar em "Authorize" no canto superior da página Swagger e colar o TOKEN retornado. Após isso, o usuário terá acesso a todos os endpoints da aplicação. Vale lembrar que o Front faz isso sem que o usuário tenha que colocar o TOKEN, mas para testar manualmente, esse processo é necessário.
