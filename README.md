@@ -43,7 +43,7 @@ O NeuroTrack adota uma arquitetura moderna e escalável, utilizando o melhor de 
 ▶️ [**Assista ao vídeo da nossa solução**](https://youtu.be/jCSo9ISv7RY)
 
 ## 🎬 Vídeo Técnico
-▶️ [**Assista ao vídeo da nossa solução**](https://youtu.be/jCSo9ISv7RY)
+▶️ [**Assista ao vídeo da nossa solução**](https://youtu.be/04hZmv_xMbQ?si=HuPoBnJ5AjVyM9jM)
 
 ---
 
@@ -88,13 +88,13 @@ Antes de rodar o projeto, certifique-se de ter os seguintes softwares instalados
 ### 1. **Clonar o repositório**
 
 ```bash
-git clone https://github.com/oraclechallenge1/Oracle-Java-Advanced.git
+git clone https://github.com/gs-neurotrack/Java-Advanced
 ```
 
 ### 2. **Acesse a pasta do projeto**
 
 ```bash
-cd ProjectMedSave
+cd ProjectNeuroTrack
 ```
 
 ### 3. **Compile o projeto**
@@ -122,13 +122,13 @@ A documentação Swagger estará disponível em:
 ### 1. **Dê um pull na imagem docker**
 
 ```bash
-docker pull devpedrosena1/project-med-save:2.0
+docker pull devpedrosena1/project-neuro-track:1.0
 ```
 
 ### 2. **Rode o container**
 
 ```bash
-docker run -p 8080:8080 project-med-save:2.0
+docker run -p 8080:8080 devpedrosena1/project-neuro-track:1.0
 ```
 
 O projeto iniciará em:  
@@ -138,6 +138,12 @@ O projeto iniciará em:
 A documentação Swagger estará disponível em:  
 
 👉 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+---
+
+# 🚀 Nossa aplicação está na nuvem! 
+
+👉 [Link Deploy](http://163.176.216.51:8080/swagger-ui/index.html)
 
 ---
 
@@ -194,8 +200,8 @@ Abaixo o exemplo da requisição:
 
 ```bash
 {
-  "email": "pedro@gmail.com",
-  "password": "bombom123"
+  "email": "teste@gmail.com",
+  "password": "test21233"
 }
 ```
 Ao realizar login, será retornado um TOKEN, e para testar a aplicação completa, basta clicar em "Authorize" no canto superior da página Swagger e colar o TOKEN retornado. Após isso, o usuário terá acesso a todos os endpoints da aplicação. Vale lembrar que o Front faz isso sem que o usuário tenha que colocar o TOKEN, mas para testar manualmente, esse processo é necessário.
