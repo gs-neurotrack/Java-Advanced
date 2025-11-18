@@ -53,7 +53,8 @@ public class AuthController {
 
         UserSys user = (UserSys) authentication.getPrincipal();
         String token = tokenConfig.generateToken(user);
-        return ResponseEntity.ok(new LoginResponse(token));
+        Long id = user.getId();
+        return ResponseEntity.ok(new LoginResponse(token, id));
     }
 
     @Operation(summary = "Registrar um usuário", method = "POST")
