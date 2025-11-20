@@ -4,7 +4,7 @@
 
 > **Cuide de sua saúde mental, ela realmente importa.**
 
-O **NeuroTrack** é uma plataforma robusta de **Business Intelligence (BI)** que transforma dados de usuários em **alertes estratégicos**. Desenvolvida para prevenir burnouts e/ou situações agravantes de saúde mental, o NeuroTrack garante a apoio e esse tipo de situação.
+O **NeuroTrack** é uma plataforma robusta de **Business Intelligence (BI)** que transforma dados de usuários em **alertes estratégicos**. Desenvolvida para prevenir burnouts e/ou situações agravantes de saúde mental, o NeuroTrack garante apoio e esse tipo de situação.
 
 ---
 
@@ -21,7 +21,6 @@ O **NeuroTrack** é uma plataforma robusta de **Business Intelligence (BI)** que
 
 O NeuroTrack adota uma arquitetura moderna e escalável, utilizando o melhor de cada tecnologia:
 
-* **Frontend & BI:** **Oracle Apex**
 * **Backend & Microserviços:** **Java** e **C#**
 * **Mobile:** **React Native**
 * **Banco de Dados:** **Oracle DB**
