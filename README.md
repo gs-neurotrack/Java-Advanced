@@ -42,7 +42,7 @@ O NeuroTrack adota uma arquitetura moderna e escalável, utilizando o melhor de 
 ▶️ [**Assista ao vídeo da nossa solução**](https://youtu.be/jCSo9ISv7RY)
 
 ## 🎬 Vídeo Técnico
-▶️ [**Assista ao vídeo da nossa solução**](https://youtu.be/04hZmv_xMbQ?si=HuPoBnJ5AjVyM9jM)
+▶️ [**Assista ao vídeo da nossa solução**](https://www.youtube.com/watch?v=UJbejlijNqI)
 
 ---
 
