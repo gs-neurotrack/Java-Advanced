@@ -1,4 +1,4 @@
-![Logo](images/logoNeuroTrack.jpeg)
+![Logo]()
 
 # 🩺 NeuroTrack
 
