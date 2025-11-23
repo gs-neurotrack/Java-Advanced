@@ -1,4 +1,4 @@
-![Logo](images/logoNeuroTrack.jpeg)
+![Logo](images/gs_logo.jpeg)
 
 
 # 🩺 NeuroTrack
@@ -49,7 +49,7 @@ O NeuroTrack adota uma arquitetura moderna e escalável, utilizando o melhor de 
 
 ### 🗃️ Diagrama de Entidade-Relacionamento (DER)
 
-![Diagrama DER](images/der_gs.png)
+![Diagrama DER](images/gs_der.png)
 
 
 ---
