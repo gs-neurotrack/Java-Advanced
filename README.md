@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="https://github.com/gs-neurotrack/Java-Advanced/blob/main/images/logoNeuroTrack.jpeg?raw=true"
-       alt="NeuroTrack Logo"
-       width="180">
-</p>
+![Logo](images/logoNeuroTrack.jpeg)
 
 
 # 🩺 NeuroTrack
@@ -53,11 +49,8 @@ O NeuroTrack adota uma arquitetura moderna e escalável, utilizando o melhor de 
 
 ### 🗃️ Diagrama de Entidade-Relacionamento (DER)
 
-<p align="center">
-  <img src="https://github.com/gs-neurotrack/Java-Advanced/blob/main/images/der_gs.png?raw=true"
-       alt="DER NeuroTrack"
-       width="800">
-</p>
+![Diagrama DER](images/der_gs.png)
+
 
 ---
 ## ✨ Tecnologias
